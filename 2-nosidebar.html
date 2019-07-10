@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hero CSS Grid Sampler</title>
+
+<style>
+body {margin:0;}
+
+
+
+.header-grid {
+	display: grid;
+	width: 100%;
+	margin: 0 0;
+
+	grid-template-columns: repeat(4, 3fr);
+	grid-template-rows: 44px 85px 42px 450px;
+	grid-template-areas:
+		"toolbar toolbar toolbar toolbar"
+		"title title title title"
+		"menu menu menu menu"
+		"hero hero hero hero"
+	;
+}
+.header {padding: 0 70px;}
+.toolbar {grid-area: toolbar; background-color: #8A0829;}
+.title {grid-area: title; background-color: #FA5882;}
+.menu {grid-area: menu; background-color: #FF0040;}
+.hero {grid-area: hero; background-color: #F7819F;}
+
+
+
+.main-grid {
+	display: grid;
+	width: 100%;
+	max-width: 1170px;
+	margin: 15px auto;
+
+	grid-template-columns: repeat(3, 4fr);
+	grid-gap: 30px;
+}
+.component {height: 200px; background-color: #F7FE2E;}
+
+
+
+
+.dept-footer {
+	width: 100%;
+	background: #00FF80;
+	padding: 15px 0;
+	margin: 0 0;
+}
+.dept-footer-grid {
+	display: grid;
+	max-width: 1170px;
+	margin: auto auto;
+
+	grid-template-columns: repeat(4, 4fr);
+	grid-gap: 30px;
+}
+.widget {height: 200px; background-color: #04B404;}
+
+
+
+.footer-grid {
+	display: grid;
+	width: 100%;
+	margin: 0 0;
+	height: 170px;
+	background: #21610B;
+
+	grid-template-columns: 6fr 6fr;
+	grid-template-areas: 
+		"footer-item footer-item"
+	;
+}
+.footer-item { grid-area: footer-item; background-color:#173B0B;}
+</style>
+
+</head>
+
+<body>
+
+<header class="header-grid">
+	<div class="header toolbar">Toolbar</div>
+	<div class="header title">Title</div>
+	<div class="header menu">Menu</div>
+	<div class="header hero">Hero</div>
+</header>
+
+<main class="main-grid">
+	<div class="component">A</div>
+	<div class="component">B</div>
+	<div class="component">C</div>
+	<div class="component">D</div>
+	<div class="component">E</div>
+	<div class="component">F</div>
+</main>
+
+<footer>
+	<div class="dept-footer">
+		<div class="dept-footer-grid">
+			<div class="widget">A</div>
+			<div class="widget">B</div>
+			<div class="widget">C</div>
+			<div class="widget">D</div>
+		</div>
+	</div>
+	<div class="footer-grid">
+		<div class="footer-item">Item</div>
+	</div>
+</footer>	
+
+</body>
+</html>
